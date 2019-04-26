@@ -1,0 +1,4 @@
+obj
+bin
+.vs
+/src/SmartClockAPI/appsettings.Development.json
