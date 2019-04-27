@@ -1,0 +1,31 @@
+﻿<Window x:Class="Arabic_Unshaping_Tool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Arabic_Unshaping_Tool"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+			<ColumnDefinition Width="3*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="1*"></RowDefinition>
+			<RowDefinition Height="1*"></RowDefinition>
+			<RowDefinition Height="1*"></RowDefinition>
+			<RowDefinition Height="1*"></RowDefinition>
+			<RowDefinition Height="1*"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Label VerticalAlignment="Center" HorizontalAlignment="Center">Text to unshape:</Label>
+		<TextBox Name="txtbxInput" Grid.Column="1" Padding="3"></TextBox>
+		<Button Name="btnStart" Grid.Row="1" Click="BtnStart_Click">Unshape</Button>
+		<Label Grid.Row="2">Unicode of shaped input:</Label>
+		<Label Name="lblShapedInputUnicode" Grid.Column="1" Grid.Row="2"></Label>
+		<Label Grid.Row="3">Unicode of unshaped input:</Label>
+		<Label Name="lblUnshapedInputUnicode" Grid.Column="1" Grid.Row="3"></Label>
+		<Label Grid.Row="4">Unshaped Text:</Label>
+		<Label Name="lblUnshapedText" Grid.Column="1" Grid.Row="4"></Label>
+	</Grid>
+</Window>

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArabicUnshaper", "ArabicUnshaper\ArabicUnshaper.csproj", "{D639D35C-2C9B-429C-B92C-0D33504AD301}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arabic Unshaping Tool", "Arabic Unshaping Tool\Arabic Unshaping Tool.csproj", "{5B9B62D0-A9DD-459E-ABE7-45A85A14FFA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArabicUnshapingLib", "ArabicUnshapingLib\ArabicUnshapingLib.csproj", "{14B627C7-B299-41EF-87AC-F7CDBD31B775}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D639D35C-2C9B-429C-B92C-0D33504AD301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D639D35C-2C9B-429C-B92C-0D33504AD301}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D639D35C-2C9B-429C-B92C-0D33504AD301}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D639D35C-2C9B-429C-B92C-0D33504AD301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B9B62D0-A9DD-459E-ABE7-45A85A14FFA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9B62D0-A9DD-459E-ABE7-45A85A14FFA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9B62D0-A9DD-459E-ABE7-45A85A14FFA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9B62D0-A9DD-459E-ABE7-45A85A14FFA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14B627C7-B299-41EF-87AC-F7CDBD31B775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B627C7-B299-41EF-87AC-F7CDBD31B775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B627C7-B299-41EF-87AC-F7CDBD31B775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B627C7-B299-41EF-87AC-F7CDBD31B775}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
