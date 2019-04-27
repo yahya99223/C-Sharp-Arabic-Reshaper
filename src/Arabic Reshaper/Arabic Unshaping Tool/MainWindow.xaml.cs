@@ -32,9 +32,9 @@ namespace Arabic_Unshaping_Tool
             var shapedUnicode = input.GetAsUnicode();
             var unshapedUnicode = input.GetUnShapedUnicode();
             var unshapedText = unshapedUnicode.DecodeEncodedNonAsciiCharacters();
-            lblShapedInputUnicode.Content = shapedUnicode;
-            lblUnshapedInputUnicode.Content = unshapedUnicode;
-            lblUnshapedText.Content = unshapedText;
+            lblShapedInputUnicode.Text = shapedUnicode;
+            lblUnshapedInputUnicode.Text = unshapedUnicode;
+            lblUnshapedText.Text = unshapedText;
         }
     }
 }
