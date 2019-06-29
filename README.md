@@ -1,8 +1,8 @@
-#**C# Arabic Reshaper**
+**C# Arabic Reshaper**
 
 Reconstruct Arabic sentences to be used in some embedded systems where shaped Arabic strings are not supported.
 
-#**Problem**
+**Problem**
 
 Let us assume we have the following word:
 
@@ -33,14 +33,21 @@ public static class StringExtensions
 ```
 The output would be:
 
-\u0633\u0645\u064A\u0631
+```\u0633\u0645\u064A\u0631```
 
 Which represents { 'س', 'م' , 'ي' , 'ر'} 
 
 instead of 
 
-\uFEB3\uFEE4\uFEF4\uFEAE 
+```\uFEB3\uFEE4\uFEF4\uFEAE ```
 
 which represnets { 'سـ' , 'ـمـ' , 'ـيـ' , 'ـر'} 
 
-#**Solution:**
+**Solution:**
+In the repo you will find three methods, which can be used like:
+```
+var input = "سمير";
+var shapedUnicode = input.GetAsUnicode(); //output: \u0633\u0645\u064A\u0631
+var unshapedUnicode = input.GetUnShapedUnicode(); //output: \uFEB3\uFEE4\uFEF4\uFEAE
+var unshapedText = unshapedUnicode.DecodeEncodedNonAsciiCharacters(); //output is unshaped string which consists of unshaped unicode, you can use it in systems that doesn't support shaped Arabic.
+```
