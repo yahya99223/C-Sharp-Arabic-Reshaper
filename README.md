@@ -44,10 +44,11 @@ instead of
 which represnets { 'سـ' , 'ـمـ' , 'ـيـ' , 'ـر'} 
 
 **Solution:**
-In the repo you will find three methods, which can be used like:
+In the repo you will find three extension methods, which can be used like:
 ```
 var input = "سمير";
 var shapedUnicode = input.GetAsUnicode(); //output: \u0633\u0645\u064A\u0631
 var unshapedUnicode = input.GetUnShapedUnicode(); //output: \uFEB3\uFEE4\uFEF4\uFEAE
 var unshapedText = unshapedUnicode.DecodeEncodedNonAsciiCharacters(); //output is unshaped string which consists of unshaped unicode, you can use it in systems that doesn't support shaped Arabic.
 ```
+Also you will find a WPF tool that takes input and gives shaped/unshaped unicode plus unshaped string 
