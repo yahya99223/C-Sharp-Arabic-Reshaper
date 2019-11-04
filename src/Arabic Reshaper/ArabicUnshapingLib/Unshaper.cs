@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ArabicUnshaper
+namespace ArabicUnshapingLib
 {
     public static class Unshaper
     {
@@ -25,17 +25,22 @@ namespace ArabicUnshaper
 
         public static string GetUnShapedUnicode(this string original)
         {
+            //remove escape characters
             original = Regex.Unescape(original.Trim());
+
             var words = original.Split(' ');
             StringBuilder builder = new StringBuilder();
-            var unicodesTable = UnicodesTable.GetArabicGliphes();
+            var unicodeTable = UnicodeTable.GetArabicGlyphs();
             foreach (var word in words)
             {
                 string previous = null;
-                for (int i = 0; i < word.Length; i++)
+                int index = 0;
+                foreach (var character in word)
                 {
-                    string shapedUnicode = @"\u" + ((int)word[i]).ToString("X4");
-                    if (!unicodesTable.ContainsKey(shapedUnicode))
+                    string shapedUnicode = @"\u" + ((int)character).ToString("X4");
+
+                    //if unicode doesn't exist in unicode table then character isn't a letter hence shaped unicode is fine
+                    if (!unicodeTable.ContainsKey(shapedUnicode))
                     {
                         builder.Append(shapedUnicode);
                         previous = null;
@@ -43,34 +48,38 @@ namespace ArabicUnshaper
                     }
                     else
                     {
-                        if (i == 0 || previous == null)
+                        //first character in word or previous character isn't a letter
+                        if (index == 0 || previous == null)
                         {
-                            builder.Append(unicodesTable[shapedUnicode][1]);
+                            builder.Append(unicodeTable[shapedUnicode][1]);
                         }
                         else
                         {
-                            if (i == word.Length - 1)
+                            bool previousCharHasOnlyTwoCases = unicodeTable[previous][4] == "2";
+                            //if last character in word
+                            if (index == word.Length - 1)
                             {
-                                if (!string.IsNullOrEmpty(previous) && unicodesTable[previous][4] == "2")
+                                if (!string.IsNullOrEmpty(previous) && previousCharHasOnlyTwoCases)
                                 {
-                                    builder.Append(unicodesTable[shapedUnicode][0]);
+                                    builder.Append(unicodeTable[shapedUnicode][0]);
                                 }
                                 else
-                                    builder.Append(unicodesTable[shapedUnicode][3]);
+                                    builder.Append(unicodeTable[shapedUnicode][3]);
                             }
                             else
                             {
-                                bool previouChar = unicodesTable[previous][4] == "2";
-                                if (previouChar)
-                                    builder.Append(unicodesTable[shapedUnicode][1]);
+                                if (previousCharHasOnlyTwoCases)
+                                    builder.Append(unicodeTable[shapedUnicode][1]);
                                 else
-                                    builder.Append(unicodesTable[shapedUnicode][2]);
+                                    builder.Append(unicodeTable[shapedUnicode][2]);
                             }
                         }
                     }
 
                     previous = shapedUnicode;
+                    index++;
                 }
+                //if not last word then add a space unicode
                 if (words.ToList().IndexOf(word) != words.Length - 1)
                     builder.Append(@"\u" + ((int)' ').ToString("X4"));
             }
@@ -82,10 +91,7 @@ namespace ArabicUnshaper
             return Regex.Replace(
                 value,
                 @"\\u(?<Value>[a-zA-Z0-9]{4})",
-                m =>
-                {
-                    return ((char)int.Parse(m.Groups["Value"].Value, NumberStyles.HexNumber)).ToString();
-                });
+                m => ((char)int.Parse(m.Groups["Value"].Value, NumberStyles.HexNumber)).ToString());
         }
     }
 }
