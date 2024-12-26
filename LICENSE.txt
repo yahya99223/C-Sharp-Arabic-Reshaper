@@ -7,6 +7,7 @@ This software is provided free of charge under the following terms:
      - The application or service does not involve pornographic content.
      - The application or service does not promote or relate to alcohol-related products or services.
      - The application or service is not designed solely for time-wasting or unproductive entertainment purposes.
+     - The application or service does not involve gambling.
 
 2. Prohibited Uses:
    - Use of this software in any commercial application or service is strictly prohibited without explicit written permission from the copyright holder.
