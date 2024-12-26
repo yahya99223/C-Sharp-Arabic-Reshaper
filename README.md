@@ -44,7 +44,7 @@ instead of
 which represnets { 'سـ' , 'ـمـ' , 'ـيـ' , 'ـر'} 
 
 **Solution:**
-In the repo you will find three extension methods, which can be used like:
+In the repo you will find three extension methods, that can be used:
 ```
 var input = "سمير";
 var shapedUnicode = input.GetAsUnicode(); //output: \u0633\u0645\u064A\u0631
@@ -55,3 +55,13 @@ var unshapedText = unshapedUnicode.DecodeEncodedNonAsciiCharacters(); //output i
 Also you will find a WPF tool that takes input and gives shaped/unshaped unicode plus unshaped string 
 
 ![Arabic unshping tool](https://github.com/yahya99223/C-Sharp-Arabic-Reshaper/blob/master/Arabic%20unshaping%20tool%20window.png)
+
+
+## License
+
+This project is licensed under a custom license. It can be used for free under the following conditions:
+- Non-commercial purposes only
+- Excludes applications related to porn, alcohol, or time-wasting activities
+
+For full terms, see the [LICENSE](./LICENSE) file. For inquiries about exceptions, please contact software.yahya@gmail.com .
+
