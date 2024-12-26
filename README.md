@@ -61,7 +61,8 @@ Also you will find a WPF tool that takes input and gives shaped/unshaped unicode
 
 This project is licensed under a custom license. It can be used for free under the following conditions:
 - Non-commercial purposes only
-- Excludes applications related to porn, alcohol, gambling, or time-wasting activities
+- Excludes applications related to porn, alcohol, or gambling.
+- Time-wasting applications aren't encouraged.
 
 For full terms, see the [LICENSE](./LICENSE.txt) file. For inquiries about exceptions, please contact software.yahya@gmail.com .
 
