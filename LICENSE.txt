@@ -12,11 +12,14 @@ This software is provided free of charge under the following terms:
    - Use of this software in any commercial application or service is strictly prohibited without explicit written permission from the copyright holder.
    - Use of this software in projects involving pornographic content, alcohol-related products or services, or gambling activities is strictly prohibited.
 
-3. Attribution:
+3. Not Encouraged Uses:
+  - Use of this software in projects designed solely for time-wasting or unproductive entertainment purposes isn't encouraged.
+
+4. Attribution:
    - You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
-4. Disclaimer:
+5. Disclaimer:
    - This software is provided "as is," without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability arising from, out of, or in connection with the software.
 
-5. Contact for Exceptions:
+6. Contact for Exceptions:
    - For commercial use inquiries, please contact software.yahya@gmail.com.
